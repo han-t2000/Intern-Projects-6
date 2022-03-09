@@ -384,7 +384,7 @@ var b = document.getElementById('b');
 var result = document.getElementById('result');
 var diffType = "diffChars";
 
-function check(){
+function check() {
     var oldStr = a.value;
     var newStr = b.value;
     var changes = JsDiff[diffType](oldStr, newStr);
@@ -392,15 +392,17 @@ function check(){
     result.innerHTML = JsDiff.convertChangesToXML(changes);
 }
 
-a.onkeyup = b.onkeyup = 
-a.onpaste = a.onchange =
-b.onpaste = b.onchange = check;
+a.onkeyup = b.onkeyup =
+    a.onpaste = a.onchange =
+    b.onpaste = b.onchange = check;
 check();
 
 var radio = document.getElementsByName('diff_type');
 for (var i = 0; i < radio.length; i++) {
-	radio[i].onchange = function(e) {
-		diffType = this.value;
-		check();
-	}
+    radio[i].onchange = function (e) {
+        diffType = this.value;
+        check();
+    }
 }
+
+Console.log("hello");

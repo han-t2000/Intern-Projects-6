@@ -404,5 +404,3 @@ for (var i = 0; i < radio.length; i++) {
         check();
     }
 }
-
-Console.log("hello");

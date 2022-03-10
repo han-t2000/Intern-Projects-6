@@ -4,15 +4,75 @@
     <meta charset="utf-8" />
     <title>Hell Yeah</title>
     <link rel="stylesheet" href="diff.css">
+    <style>
+        textarea {
+            resize: none;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
+        }
+
+        .myDiv {
+            margin: auto;
+            border: 1px outset black;
+            width: 900px;
+            height: 300px;
+            display: block;
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
 </head>
 <body>
     <label><input type="radio" name="diff_type" value="diffChars" checked> Chars</label>
     <label><input type="radio" name="diff_type" value="diffWords"> Words</label>
     <label><input type="radio" name="diff_type" value="diffLines"> Lines</label>
     <label><input type='radio' name='diff_type' value='diffCss'> CSS</label>
+    <br />
+    <br />
+    <br />
 
-<textarea id='a'>Foo bar is equal to bar foz.</textarea> <textarea id='b'>Foo bar is not equal to bar foo.</textarea>
-    <div id='result'></div>
+
+    <div>
+        <textarea readonly id='a' cols="100" rows="30">
+Physical and Environmental Security focuses specifically on the protection of computer facilities and IT equipment.
+ 
+Communications and Operations Management specifies the requirements for maintaining the security controls in systems and networks.
+ 
+Access Control provides the security requirements for granting access rights to networks, systems, applications, functions and data.
+ 
+Information Systems Acquisition, Development and Maintenance address the security requirements for application systems development.
+ 
+Information Security Incident Management specifies the anticipation and response appropriately to information security breaches.
+ 
+Business Continuity Management provides the basis for the protection, maintenance and recovering process of business-critical systems.
+ 
+Compliance aims to ensure conformance with information security policies, standards, laws and regulations.</textarea>
+
+
+        <textarea readonly id='b' cols="100" rows="30">
+Physical and Environmental Security focuse specifically on the protection of computer facilities and IT equipment.
+ 
+Communications and Operations Management specifies the requirements for maintaining the security controls in systems and networks.
+ 
+Access Control provides the security requirements for granting access rights to networks, applications, functions as well as data.
+ 
+Information Systems Acquisition, Development and Maintenance address the security requirements for application systems development.
+ 
+Information Security Incident Management specifies the anticipation and response appropriately to information security breaches.
+ 
+Business Continuity Management provides the basis for the protection, maintenance and recovering process of business-critical systems.
+ 
+Compliance aims to ensure conformance with information security policies, standards, laws and regulations.
+
+Compliance
+
+Compliance with these policies by all employees is essential to ensure that PB Group's information and information systems resources are well protected. Violation to these policies may subject employees to disciplinary action, up to and including termination.</textarea>
+
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <div class ="myDiv" id='result'>Result of Comparison</div>
 
     <script type="text/javascript" src="JsDiff.js"></script>
 </body>

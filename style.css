@@ -10,7 +10,25 @@ ins {
     text-decoration: none;
 }
 
-/*textarea {
+textarea {
     resize: none;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.myDiv {
+    margin: auto;
+    border: 1px outset black;
+    padding: 10px 3px 3px 10px;
+    width: 900px;
+    height: 300px;
+    display: block;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*#a label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
 }
 */

@@ -11,45 +11,77 @@
     <label><input type="radio" name="diff_type" value="diffWords"> Words</label>
     <label><input type="radio" name="diff_type" value="diffLines"> Lines</label>
     <label><input type='radio' name='diff_type' value='diffCss'> CSS</label>
+
     <br />
     <br />
     <br />
+    <iframe height="300" width="820" src="Original.html" title="Original File"></iframe>
+    <iframe height="300" width="820" src="Revised.html" title="Revised File"></iframe>
+
+    <script type="text/javascript" src="JsDiff.js"></script>
+
+    <input type="file" name="inputfile"
+           id="inputfile">
+    <br>
+
+    <textarea id ="output" cols="50" rows="30"></textarea>
+
+    <input type="file" name="inputfile"
+           id="inputfile">
+    <br>
+
+    <textarea id="output" cols="50" rows="30"></textarea>
+
+    <script type="text/javascript">
+        document.getElementById('inputfile')
+            .addEventListener('change', function () {
+
+                var fr = new FileReader();
+                fr.onload = function () {
+                    document.getElementById('output')
+                        .textContent = fr.result;
+                }
+
+                fr.readAsText(this.files[0]);
+            })
+    </script>
 
     <div>
         <textarea readonly id='a' cols="100" rows="30">
 Physical and Environmental Security focuses specifically on the protection of computer facilities and IT equipment.
- 
+
 Communications and Operations Management specifies the requirements for maintaining the security controls in systems and networks.
- 
-Access Control provides the security requirements for granting access rights to networks, systems, applications, functions and data.
- 
+
+<font>Access Control provides the security requirements for granting access rights to networks, systems, applications, functions and data.</font>
+
 Information Systems Acquisition, Development and Maintenance address the security requirements for application systems development.
- 
+
 Information Security Incident Management specifies the anticipation and response appropriately to information security breaches.
- 
+
 Business Continuity Management provides the basis for the protection, maintenance and recovering process of business-critical systems.
- 
+
 Compliance aims to ensure conformance with information security policies, standards, laws and regulations.</textarea>
 
 
         <textarea readonly id='b' cols="100" rows="30">
 Physical and Environmental Security focuse specifically on the protection of computer facilities and IT equipment.
- 
-Communications and Operations Management specifies the requirements for maintaining the security controls in systems and networks.
- 
+
+<p>Communications and Operations Management specifies the requirements for maintaining the security controls in systems and networks.</p>
+
 Access Control provides the security requirements for granting access rights to networks, applications, functions as well as data.
- 
+
 Information Systems Acquisition, Development and Maintenance address the security requirements for application systems development.
- 
+
 Information Security Incident Management specifies the anticipation and response appropriately to information security breaches.
- 
+
 Business Continuity Management provides the basis for the protection, maintenance and recovering process of business-critical systems.
- 
+
 Compliance aims to ensure conformance with information security policies, standards, laws and regulations.
 
 Compliance with these policies by all employees is essential to ensure that PB Group's information and information systems resources are well protected. Violation to these policies may subject employees to disciplinary action, up to and including termination.</textarea>
 
     </div>
+
     <br />
     <br />
     <div class="myDiv" id='result'>Result of Comparison</div>

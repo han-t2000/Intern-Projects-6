@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Hell Yeah</title>
-    <link rel="stylesheet" href="diff.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -11,12 +11,12 @@
     <input type="file" name="inputfile" id="revised" onchange="document.getElementById('document2').src = window.URL.createObjectURL(this.files[0])">
 
     <h2>HTML Output</h2>
-    <iframe height="300" width="820" id="document" src="" title="Original File"></iframe>
-    <iframe height="300" width="820" id="document2" src="" title="Revised File"></iframe>
+    <iframe height="300" id="document" src="" title="Original File"></iframe>
+    <iframe height="300" id="document2" src="" title="Revised File"></iframe>
 
     <h2>HTML Code</h2>
-    <textarea id='a' cols="100" rows="30"></textarea>
-    <textarea id='b' cols="100" rows="30"></textarea>
+    <textarea id='a' rows="20"></textarea>
+    <textarea id='b' rows="20"></textarea>
 
     <h2>Result of Comparison</h2>
     <label><input type="radio" name="diff_type" value="diffChars"> Chars</label>

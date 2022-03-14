@@ -7,8 +7,12 @@
 
 </head>
 <body>
-    <input type="file" name="inputfile" id="original" onchange="document.getElementById('document').src = window.URL.createObjectURL(this.files[0])">
-    <input type="file" name="inputfile" id="revised" onchange="document.getElementById('document2').src = window.URL.createObjectURL(this.files[0])">
+    <div class="divCenter">
+        <input type="file" name="inputfile" id="original" onchange="document.getElementById('document').src = window.URL.createObjectURL(this.files[0])">
+        <input type="file" name="inputfile" id="revised" onchange="document.getElementById('document2').src = window.URL.createObjectURL(this.files[0])">
+        <!--<label for="original">Original File</label>
+        <label for="revised">File to compare</label>-->
+    </div>
 
     <h2>HTML Output</h2>
     <iframe height="300" id="document" src="" title="Original File"></iframe>
@@ -19,10 +23,13 @@
     <textarea id='b' rows="20"></textarea>
 
     <h2>Result of Comparison</h2>
-    <label><input type="radio" name="diff_type" value="diffChars"> Chars</label>
-    <label><input type="radio" name="diff_type" value="diffWords"> Words</label>
-    <label><input type="radio" name="diff_type" value="diffLines"> Lines</label>
-    <label><input type='radio' name='diff_type' value='diffCss'> CSS</label>
+    <div class="divCenter">
+        <label><input type="radio" name="diff_type" value="diffChars"> Chars</label>
+        <label><input type="radio" name="diff_type" value="diffWords"> Words</label>
+        <label><input type="radio" name="diff_type" value="diffLines"> Lines</label>
+        <label><input type='radio' name='diff_type' value='diffCss'> CSS</label>
+    </div>
+    <br />
 
     <div class="myDiv" id='result'>Result of Comparison</div>
 

@@ -2,12 +2,6 @@ h2 {
     text-align: center;
 }
 
-/*label {
-    display: inline-block;
-    width: 90%;
-    text-align: center;
-}
-*/
 del {
     text-decoration: none;
     color: #b30000;
@@ -40,3 +34,8 @@ iframe {
     display: block;
     font-family: "Times New Roman", Times, serif;
 }
+
+.divCenter {
+    text-align: center;
+}
+

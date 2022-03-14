@@ -1,3 +1,13 @@
+h2 {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 90%;
+    text-align: right;
+}
+
 del {
     text-decoration: none;
     color: #b30000;
@@ -25,10 +35,3 @@ textarea {
     display: block;
     font-family: "Times New Roman", Times, serif;
 }
-
-/*#a label {
-    display: inline-block;
-    width: 140px;
-    text-align: right;
-}
-*/

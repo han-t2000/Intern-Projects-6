@@ -311,7 +311,8 @@ var JsDiff = (function () {
                 } else if (diffstr[i][0] === ' ') {
                     diff[0].newlines.push(diffstr[i].substr(1));
                     diff[0].oldlines.push(diffstr[i].substr(1));
-                } else if (diffstr[i][0] === '\\') {
+                }
+                else if (diffstr[i][0] === '\\') {
                     if (diffstr[i - 1][0] === '+') {
                         remEOFNL = true;
                     } else if (diffstr[i - 1][0] === '-') {

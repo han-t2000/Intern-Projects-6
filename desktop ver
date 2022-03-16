@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hell Yeah</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="divCenter">
+        <!--<input type="file" name="inputfile" id="original" onchange="document.getElementById('document').src = window.URL.createObjectURL(this.files[0])">
+        <input type="file" name="inputfile" id="revised" onchange="document.getElementById('document2').src = window.URL.createObjectURL(this.files[0])">-->
+        <!--<label for="original">Original File</label>
+        <label for="revised">File to compare</label>-->
+
+
+    </div>
+
+    <h2>HTML Output</h2>
+    <iframe height="300" id="document" src="" title="Original File"></iframe>
+    <iframe height="300" id="document2" src="" title="Revised File"></iframe>
+
+    <h2>HTML Code</h2>
+    <textarea id='a' rows="20">document.write('
+
+<html>
+<body>
+    <p>
+        Physical and Environmental Security focuses specifically on the protection of computer facilities and IT equipment.
+    <br /><br />
+        Communications and Operations Management specifies the requirements for maintaining the security controls in systems and networks.
+    <br /><br />
+        Access Control provides the security requirements for granting access rights to networks, systems, applications, functions as well as data.
+    <br /><br />
+        Information Systems Acquisition, Development and Maintenance address the security requirements for application systems development.
+    <br /><br />
+        Information Security Incident Management specifies the anticipation and response appropriately to information security breaches.
+    <br /><br />
+        Business Continuity Management provides the basis for the protection, maintenance and recovering process of business-critical systems.
+    <br /><br />
+        Compliance aims to ensure conformance with information security policies, standards, laws and regulations.
+    </p>
+</body>
+</html>')
+
+</textarea>
+
+    <textarea id='b' rows="20"></textarea>
+
+    <h2>Result of Comparison</h2>
+    <div class="divCenter">
+        <label><input type="radio" name="diff_type" value="diffChars"> Chars</label>
+        <label><input type="radio" name="diff_type" value="diffWords"> Words</label>
+        <label><input type="radio" name="diff_type" value="diffLines"> Lines</label>
+        <label><input type='radio' name='diff_type' value='diffCss'> CSS</label>
+    </div>
+    <br />
+
+    <div class="myDiv" id='result'>Result of Comparison</div>
+
+    <script type="text/javascript" src="JsDiff.js"></script>
+
+    <script type="text/javascript">
+        document.getElementById('original')
+            .addEventListener('change', function () {
+
+                var fr = new FileReader();
+                fr.onload = function () {
+                    document.getElementById('a')
+                        .textContent = fr.result;
+                }
+
+                fr.readAsText(this.files[0]);
+            })
+
+        document.getElementById('revised')
+            .addEventListener('change', function () {
+
+                var fr = new FileReader();
+                fr.onload = function () {
+                    document.getElementById('b')
+                        .textContent = fr.result;
+                }
+
+                fr.readAsText(this.files[0]);
+            })
+
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
